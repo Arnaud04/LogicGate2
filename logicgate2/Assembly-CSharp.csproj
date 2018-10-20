@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Script niveaux\dragging.cs" />
     <Compile Include="Assets\Script\Script pour les menus\Dont_destroy.cs" />
     <Compile Include="Assets\Script\Script pour les menus\LoadScene.cs" />
     <Compile Include="Assets\Script\Script pour les menus\script_scenes.cs" />

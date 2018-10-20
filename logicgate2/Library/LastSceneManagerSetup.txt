@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/07_MenuDidacticiel.unity
+- path: Assets/Scenes/03_MenuCamagne.unity
   isLoaded: 1
   isActive: 1
