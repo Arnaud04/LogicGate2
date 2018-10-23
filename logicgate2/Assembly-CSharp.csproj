@@ -61,6 +61,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Prefab\Gates\a.cs" />
+    <Compile Include="Assets\Prefab\input\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Prefab\output\NewBehaviourScript.cs" />
     <Compile Include="Assets\Script\Script niveaux\dragging.cs" />
     <Compile Include="Assets\Script\Script pour les menus\Dont_destroy.cs" />
     <Compile Include="Assets\Script\Script pour les menus\LoadScene.cs" />
