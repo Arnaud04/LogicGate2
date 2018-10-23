@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/02_MenuJouer.unity
     guid: e232e7a2fb1eb9647929c477877358d0
   - enabled: 1
-    path: Assets/Scenes/03_MenuCamagne.unity
+    path: Assets/Scenes/03_MenuCampagne.unity
     guid: b9ad47f968da94d4f98e6c69148e31ef
   - enabled: 1
     path: Assets/Scenes/04_ChoixDifficult.unity
