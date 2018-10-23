@@ -6,14 +6,15 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour {
 
     // Use this for initialization
-    public int scene;
+  
     
     void Start()
     {
 
 
     }
-	public void loader(){
+
+	public void Loader(string scene){
 
         SceneManager.LoadSceneAsync(scene);
         SceneManager.UnloadScene(SceneManager.GetActiveScene());
