@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/07_MenuDidacticiel.unity
     guid: 21e2287b1f1aa4f45846c7cf701db1d6
+  - enabled: 1
+    path: Assets/Scenes/test.unity
+    guid: 14fb7252d5b35794e8c410022b1ba133
   m_configObjects: {}

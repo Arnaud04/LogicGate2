@@ -355,7 +355,7 @@ Prefab:
     - target: {fileID: 114002771514474062, guid: 69720f75e7a25c0468438fc851fa34b5,
         type: 2}
       propertyPath: m_UiScaleMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69720f75e7a25c0468438fc851fa34b5, type: 2}
@@ -655,7 +655,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 317.99997, y: -494.72058}
+  m_AnchoredPosition: {x: 290.00006, y: -494.64026}
   m_SizeDelta: {x: 480, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &803083067
@@ -749,7 +749,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 253, y: -10}
-  m_SizeDelta: {x: 20, y: 270}
+  m_SizeDelta: {x: 20, y: 239.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &865570613
 MonoBehaviour:
@@ -789,8 +789,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 605714517}
   m_HandleRect: {fileID: 605714516}
   m_Direction: 2
-  m_Value: 0.9926979
-  m_Size: 0.277
+  m_Value: 0.9929512
+  m_Size: 0.23962265
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

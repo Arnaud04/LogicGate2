@@ -808,12 +808,17 @@ Prefab:
     - target: {fileID: 114002771514474062, guid: 69720f75e7a25c0468438fc851fa34b5,
         type: 2}
       propertyPath: m_UiScaleMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114002771514474062, guid: 69720f75e7a25c0468438fc851fa34b5,
         type: 2}
       propertyPath: m_ReferenceResolution.y
       value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 114440502932261028, guid: 69720f75e7a25c0468438fc851fa34b5,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 07_MenuDidacticiel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69720f75e7a25c0468438fc851fa34b5, type: 2}
