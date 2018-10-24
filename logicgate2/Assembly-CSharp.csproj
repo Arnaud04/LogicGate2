@@ -74,6 +74,7 @@
     <Compile Include="Assets\Script\Script niveaux\output\scoutput.cs" />
     <Compile Include="Assets\Script\Script pour les menus\Dont_destroy.cs" />
     <Compile Include="Assets\Script\Script pour les menus\LoadScene.cs" />
+    <Compile Include="Assets\Script\Script pour les menus\QuitGame.cs" />
     <Compile Include="Assets\Script\Script pour les menus\script_scenes.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/arnau/Documents/GitHub/LogicGate2/logicgate2/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
