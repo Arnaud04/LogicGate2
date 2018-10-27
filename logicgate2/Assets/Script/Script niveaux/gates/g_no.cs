@@ -7,6 +7,7 @@ public class g_no : MonoBehaviour {
     public GameObject in1, output;// entry gates and output
     public GameObject on, off; // image of state of gate
     public bool fix;// draging possible?
+    private bool state;
 
 	// Use this for initialization
 	void Start () {
@@ -38,14 +39,19 @@ public class g_no : MonoBehaviour {
 
     public bool ExitOfGate()
     {
-
-
-        return false;
-
-        return true;
+       
+        if ( true) {
+            state = false;
+            return state;
+        }
+        else {
+            state = true;
+            return state;
+        }
     }
     // Update is called once per frame
     void Update () {
 		
+            
 	}
 }

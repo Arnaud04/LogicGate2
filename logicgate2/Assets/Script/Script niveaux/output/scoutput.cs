@@ -5,14 +5,17 @@ using UnityEngine;
 public class scoutput : MonoBehaviour {
 
     private bool state;
-    public GameObject on, off, gate;
+    public GameObject on, off,gate;
     private Vector3 mine;
     // Use this for initialization
     void Start()
     {
         state = false;
+       if(state == false) on.SetActive(false);
+        else off.SetActive(false);
+       
         mine = this.transform.position;
-        on.SetActive(false);
+        
 
 
     }
