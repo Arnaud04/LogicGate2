@@ -61,8 +61,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Prefab\input\c.cs" />
-    <Compile Include="Assets\Prefab\output\b.cs" />
+    <Compile Include="Assets\Prefab\niveau\jeu\input\c.cs" />
+    <Compile Include="Assets\Prefab\niveau\jeu\output\b.cs" />
     <Compile Include="Assets\Script\Script niveaux\dragging.cs" />
     <Compile Include="Assets\Script\Script niveaux\gates\drag_gate.cs" />
     <Compile Include="Assets\Script\Script niveaux\gates\g_and.cs" />
