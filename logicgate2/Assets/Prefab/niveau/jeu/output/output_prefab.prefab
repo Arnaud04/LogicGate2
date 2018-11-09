@@ -118,6 +118,7 @@ MonoBehaviour:
   on: {fileID: 1033636367280044}
   off: {fileID: 1069882979362428}
   gate: {fileID: 0}
+  source: {fileID: 1705316449998168, guid: aa9773455a80737439d4b2c202b287a5, type: 2}
 --- !u!114 &114416211028618146
 MonoBehaviour:
   m_ObjectHideFlags: 1

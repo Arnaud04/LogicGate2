@@ -4,56 +4,49 @@ using UnityEngine;
 
 public class g_xor : MonoBehaviour {
 
-    public GameObject in1, in2, output;// entry gates and output
+    public obj_output in1, in2;
+    public obj_input output;// entry gates and output
     public GameObject on, off; // image of state of gate
     public bool fix;// draging possible?
-
+    public int state;
     // Use this for initialization
     void Start()
     {
-        in1 = null;
-        in2 = null;
-        output = null;
+        state = 0; 
     }
 
-    public void LinkIn1(GameObject first)
-    {
-        in1 = first;
-    }
-    public void LinkIn2(GameObject second)
-    {
-        in2 = second;
-    }
-    public void LinkOutput(GameObject exit)
-    {
-        output = exit;
-    }
-
-    public void UnlinkIn1()
-    {
-        in1 = null;
-    }
-    public void UnlinkIn2()
-    {
-        in2 = null;
-    }
-    public void UnlinkOutput()
-    {
-        output = null;
-    }
+    
 
 
-    public bool ExitOfGate()
+    public int ExitOfGate()
     {
 
+        if ((in1.InIsnotnull() && in2.InIsnotnull()) && (in1.Getinstate() != 0 && in2.Getinstate() != 0))
+        {
 
-        return false;
-
-        return true;
+            Debug.Log("les deux sont relié");
+                if ((in1.Getinstate() == 1 && in2.Getinstate() == 2) || (in1.Getinstate() == 2 && in2.Getinstate() == 1))
+                {
+                Debug.Log(" vrai");
+                        state = 2;
+                        return state;
+                    
+                    
+                }
+                else
+                {
+                    state = 1;
+                   return state;
+                }
+                   
+                
+        }
+        state = 0;
+        return state;
     }
 
     // Update is called once per frame
     void Update () {
-		
+        output.ininfo.SetState(ExitOfGate());
 	}
 }

@@ -41,9 +41,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fix: 0
-  node_in1: {fileID: 0}
-  node_in2: {fileID: 0}
-  node_out: {fileID: 0}
+  node_in1: {fileID: 1046162785692810, guid: 6b8bdf57cb33d0c45875b4363864283d, type: 2}
+  node_in2: {fileID: 1051307924459810, guid: a8938399b836e4942a0a8faf079b52c9, type: 2}
+  node_out: {fileID: 1312582789657018, guid: cfe8b64d407cfaf46990dd7f0eaea073, type: 2}
   width_c: 80
   height_c: 120
 --- !u!114 &114873656136010500

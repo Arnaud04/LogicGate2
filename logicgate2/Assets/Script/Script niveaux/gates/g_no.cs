@@ -4,54 +4,52 @@ using UnityEngine;
 
 public class g_no : MonoBehaviour {
 
-    public GameObject in1, output;// entry gates and output
+    //public GameObject in1, output;// entry gates and output
     public GameObject on, off; // image of state of gate
+
+    public obj_output in1;
+    public obj_input exit;
     public bool fix;// draging possible?
-    private bool state;
+    private int state;
+
+
 
 	// Use this for initialization
 	void Start () {
-        in1 = null;
+
+        state = 0;
         
-        output = null;
 	}
 	
-    public void LinkIn1(GameObject first)
-    {
-        in1 = first;
-    }
    
-    public void LinkOutput(GameObject exit)
-    {
-        output = exit;
-    }
-
-    public void UnlinkIn1()
-    {
-        in1 = null;
-    }
-    
-    public void UnlinkOutput()
-    {
-        output = null;
-    }
 
 
-    public bool ExitOfGate()
+    public int ExitOfGate()
     {
-       
-        if ( true) {
-            state = false;
-            return state;
+
+
+        if (in1.InIsnotnull() == true  && in1.outinfo.GetState() != 0)
+        {
+            if (in1.outinfo.GetState() == 2)
+            {
+                state = 1;
+                return state;
+            }
+            else
+            {
+                state = 2;
+                return state;
+            }
         }
-        else {
-            state = true;
-            return state;
+        else
+        {
+            state = 0;
+            return 0;
         }
     }
     // Update is called once per frame
     void Update () {
-		
-            
+
+        exit.ininfo.SetState(ExitOfGate());  
 	}
 }

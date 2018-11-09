@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class scinput : MonoBehaviour {
 
-    public bool state;
-    public GameObject on, off;
+    public int state;// 0 non connecté; 1 faux ; 2 vrai
+    public GameObject on, off,source;
     private Vector3 mine;
     public bool fix_drag, fix_value;
     private  bool dragged;// savoir si elle à était posé
@@ -15,8 +15,8 @@ public class scinput : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         mine = this.transform.position;
-
-        if (state == true) off.SetActive(false);
+        
+        if (state == 2) off.SetActive(false);
         else on.SetActive(false);
         dragged = false;
 
@@ -30,7 +30,11 @@ public class scinput : MonoBehaviour {
         throw new NotImplementedException();
     }
 
-    public bool GetState()
+    public void SetState(int newstate)
+    {
+        state = newstate;
+    }
+    public int GetState()
     {
 
         return state;
@@ -56,19 +60,22 @@ public class scinput : MonoBehaviour {
         
         if ( Vector3.Equals( mine , this.transform.position) && fix_value == false)// if input didn't moved, change the state
         {
-            Debug.Log("deplacement");
-          
-            if (state == true)
+            Debug.Log("deplacement"+ state);
+
+            if (state == 2)
             {
-                state = false;
+                state = 1;
                 on.SetActive(false);
                 off.SetActive(true);
             }
             else
             {
-                state = true;
-                on.SetActive(true);
-                off.SetActive(false);
+                if (state == 1)
+                {
+                    state = 2;
+                    on.SetActive(true);
+                    off.SetActive(false);
+                }
             }
         }
 

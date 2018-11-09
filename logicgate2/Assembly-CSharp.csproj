@@ -73,6 +73,7 @@
     <Compile Include="Assets\Script\Script niveaux\gates\g_xor.cs" />
     <Compile Include="Assets\Script\Script niveaux\input\drag_in.cs" />
     <Compile Include="Assets\Script\Script niveaux\input\drag_line.cs" />
+    <Compile Include="Assets\Script\Script niveaux\input\draw_link.cs" />
     <Compile Include="Assets\Script\Script niveaux\input\scinput.cs" />
     <Compile Include="Assets\Script\Script niveaux\output\drag_out.cs" />
     <Compile Include="Assets\Script\Script niveaux\output\scoutput.cs" />
@@ -80,6 +81,10 @@
     <Compile Include="Assets\Script\Script pour les menus\LoadScene.cs" />
     <Compile Include="Assets\Script\Script pour les menus\QuitGame.cs" />
     <Compile Include="Assets\Script\Script pour les menus\script_scenes.cs" />
+    <Compile Include="Assets\Test\script\controller_link.cs" />
+    <Compile Include="Assets\Test\script\drag_link.cs" />
+    <Compile Include="Assets\Test\script\obj_input.cs" />
+    <Compile Include="Assets\Test\script\obj_output.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/GitHub/LogicGate2/logicgate/logicgate2/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

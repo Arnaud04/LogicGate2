@@ -92,6 +92,7 @@ MonoBehaviour:
   state: 0
   on: {fileID: 1345598344582196}
   off: {fileID: 1468384328226038}
+  source: {fileID: 1912604349621918, guid: 6b24adeea0a1b5c4a8148a653fa31139, type: 2}
   fix_drag: 0
   fix_value: 0
 --- !u!114 &114183891307800468

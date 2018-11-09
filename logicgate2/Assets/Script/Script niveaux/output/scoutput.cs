@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class scoutput : MonoBehaviour {
 
-    private bool state;
-    public GameObject on, off,gate;
+    private int state;
+    public GameObject on, off,gate,source;
     private Vector3 mine;
     // Use this for initialization
     void Start()
     {
-        state = false;
-       if(state == false) on.SetActive(false);
+        state = 0;
+       if(state != 2) on.SetActive(false);
         else off.SetActive(false);
        
         mine = this.transform.position;
@@ -29,19 +29,28 @@ public class scoutput : MonoBehaviour {
     public void Unlink()
     {
         gate = null;
-        state = false;
+        state = 0;
     }
 
-    public bool GetState()
+    public int GetState()
     {
 
         return state;
     }
-    public void ChangeState(bool newState)
+    public void ChangeState(int newState)
     {
 
         state = newState;
-
+        if(state != 2)
+        {
+            on.SetActive(false);
+            off.SetActive(true);
+        }
+        if(state == 2)
+        {
+            on.SetActive(true);
+            off.SetActive(false);
+        }
 
     }
 
