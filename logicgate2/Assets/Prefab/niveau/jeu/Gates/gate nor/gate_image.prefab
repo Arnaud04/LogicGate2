@@ -9,19 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1145045743394688}
+  m_RootGameObject: {fileID: 1938038905722592}
   m_IsPrefabAsset: 1
---- !u!1 &1145045743394688
+--- !u!1 &1938038905722592
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 224577828522362774}
-  - component: {fileID: 222083220804077586}
-  - component: {fileID: 114525650150792950}
-  - component: {fileID: 114603875313304494}
+  - component: {fileID: 224199519043195952}
+  - component: {fileID: 222949946565323374}
+  - component: {fileID: 114387502714621792}
+  - component: {fileID: 114862511057737620}
   m_Layer: 0
   m_Name: gate_image
   m_TagString: Untagged
@@ -29,12 +29,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114525650150792950
+--- !u!114 &114387502714621792
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1145045743394688}
+  m_GameObject: {fileID: 1938038905722592}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -56,12 +56,12 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114603875313304494
+--- !u!114 &114862511057737620
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1145045743394688}
+  m_GameObject: {fileID: 1938038905722592}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27fe1fc5100cb1a45978155430da95e7, type: 3}
@@ -73,19 +73,21 @@ MonoBehaviour:
   node_out: {fileID: 0}
   width_c: 80
   height_c: 120
---- !u!222 &222083220804077586
+  margin_x: 8
+  margin_y: 20
+--- !u!222 &222949946565323374
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1145045743394688}
+  m_GameObject: {fileID: 1938038905722592}
   m_CullTransparentMesh: 0
---- !u!224 &224577828522362774
+--- !u!224 &224199519043195952
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1145045743394688}
+  m_GameObject: {fileID: 1938038905722592}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 4.020952}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}

@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{B90D8598-4C96-F0FF-9BF5-B1270DAE6108}</ProjectGuid>
+    <ProjectGuid>{404D4988-7EF3-025C-6B8E-0215AD24CC60}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,39 +63,48 @@
   <ItemGroup>
     <Compile Include="Assets\Prefab\niveau\jeu\input\c.cs" />
     <Compile Include="Assets\Prefab\niveau\jeu\output\b.cs" />
+    <Compile Include="Assets\Script\Script niveaux\Canvas ( instancieur )\copy_obj.cs" />
+    <Compile Include="Assets\Script\Script niveaux\controller\controller_link.cs" />
+    <Compile Include="Assets\Script\Script niveaux\controller\cursorscript.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\gates\drag_gate.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\gates\g_and.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\gates\g_nand.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\gates\g_no.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\gates\g_nor.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\gates\g_or.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\gates\g_xor.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\input\drag_in.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\input\drag_source.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\input\obj_input.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\input\scinput.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\obj_composition.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\output\drag_out.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\output\obj_output.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\output\scoutput.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\output\source_out.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\selfdestruct.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\Signalcol.cs" />
     <Compile Include="Assets\Script\Script niveaux\dragging.cs" />
-    <Compile Include="Assets\Script\Script niveaux\gates\drag_gate.cs" />
-    <Compile Include="Assets\Script\Script niveaux\gates\g_and.cs" />
-    <Compile Include="Assets\Script\Script niveaux\gates\g_nand.cs" />
-    <Compile Include="Assets\Script\Script niveaux\gates\g_no.cs" />
-    <Compile Include="Assets\Script\Script niveaux\gates\g_nor.cs" />
-    <Compile Include="Assets\Script\Script niveaux\gates\g_or.cs" />
-    <Compile Include="Assets\Script\Script niveaux\gates\g_xor.cs" />
-    <Compile Include="Assets\Script\Script niveaux\input\drag_in.cs" />
-    <Compile Include="Assets\Script\Script niveaux\input\drag_line.cs" />
-    <Compile Include="Assets\Script\Script niveaux\input\draw_link.cs" />
-    <Compile Include="Assets\Script\Script niveaux\input\scinput.cs" />
-    <Compile Include="Assets\Script\Script niveaux\output\drag_out.cs" />
-    <Compile Include="Assets\Script\Script niveaux\output\scoutput.cs" />
+    <Compile Include="Assets\Script\Script niveaux\instiatespace\instanciation.cs" />
+    <Compile Include="Assets\Script\Script niveaux\transmitter\transmitter.cs" />
+    <Compile Include="Assets\Script\Script niveaux\trash\drop.cs" />
     <Compile Include="Assets\Script\Script pour les menus\Dont_destroy.cs" />
     <Compile Include="Assets\Script\Script pour les menus\LoadScene.cs" />
     <Compile Include="Assets\Script\Script pour les menus\QuitGame.cs" />
     <Compile Include="Assets\Script\Script pour les menus\script_scenes.cs" />
-    <Compile Include="Assets\Test\script\controller_link.cs" />
     <Compile Include="Assets\Test\script\drag_link.cs" />
-    <Compile Include="Assets\Test\script\obj_input.cs" />
-    <Compile Include="Assets\Test\script\obj_output.cs" />
+    <Compile Include="Assets\Test\script\draw_link.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/GitHub/LogicGate2/logicgate/logicgate2/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>D:/save logicgate/logicgate2 17,11/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/GitHub/LogicGate2/logicgate/logicgate2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/save logicgate/logicgate2 17,11/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/GitHub/LogicGate2/logicgate/logicgate2/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/save logicgate/logicgate2 17,11/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/GitHub/LogicGate2/logicgate/logicgate2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/save logicgate/logicgate2 17,11/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -275,7 +284,7 @@
       <HintPath>D:/unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
     </Reference>
     <Reference Include="Facebook.Unity.Settings">
-      <HintPath>D:/GitHub/LogicGate2/logicgate/logicgate2/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+      <HintPath>D:/save logicgate/logicgate2 17,11/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

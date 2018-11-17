@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class drag_link : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public GameObject source;
+    public UnityEngine.GameObject source;
     public Material material;
     private Vector3 spot;
     private LineRenderer line;
