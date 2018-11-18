@@ -35,6 +35,13 @@ public class obj_input : MonoBehaviour {
         if (outinfo == null) return false;
         return true;
     }
+
+    public void NewPath()
+    {
+
+        if(outinfo != null)
+            outinfo.DeletePath();
+    }
     public void Unlinkout()
     {
         if (outinfo != null)

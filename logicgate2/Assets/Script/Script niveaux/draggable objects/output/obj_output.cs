@@ -34,7 +34,8 @@ public class obj_output : MonoBehaviour {
 
     public void DeletePath()
     {
-        dg_src.NewPath();
+        if(dg_src != null)
+             dg_src.NewPath();
     }
     public void Unsetin()
     {

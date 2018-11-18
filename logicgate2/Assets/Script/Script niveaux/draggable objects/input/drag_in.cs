@@ -10,7 +10,7 @@ public class drag_in : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
     public UnityEngine.GameObject node;
     public scinput in0;
     private float time;
-   
+    public obj_input obj_in;
 
     // Use this for initialization
 
@@ -29,6 +29,8 @@ public class drag_in : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
                 pos.x = eventData.position.x + 30;
                 pos.y = eventData.position.y ;
                 node.transform.position = pos;
+                obj_in.NewPath();
+                obj_in.Unlinkout();
             }
         }
     }

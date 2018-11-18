@@ -6,6 +6,8 @@ public class copy_obj : MonoBehaviour {
 
     // Use this for initialization
     public GameObject father;
+    public level_controller cont_level;
+    public obj_structure obj;
     
 
     public void copyobj(GameObject obj ,Vector3 vec,Quaternion q, int index)

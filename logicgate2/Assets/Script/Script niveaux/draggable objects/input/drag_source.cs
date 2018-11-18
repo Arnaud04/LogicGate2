@@ -8,7 +8,8 @@ public class drag_source : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public new Camera camera;
 
-    public Material lineMaterial;
+    public Material lineMaterialfalse,lineMaterialtrue;
+    
     public float lineWith;
     public float depth;
     private Vector3? lineStartPoint = null;
@@ -19,10 +20,13 @@ public class drag_source : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private int max_line = 20;
     private UnityEngine.GameObject[] lines;// nombre de ligne 
+    private LineRenderer[] linesRend;
 
     public controller_link control;
     public obj_input obj_in;
     public drag_source dg;
+    private int state = 1;
+
     private int nb_line = 0; // count of linerenderer to the path
     private bool valid_path = false;// tell if the pass connected 2 object or no
     
@@ -31,10 +35,13 @@ public class drag_source : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void NewPath()// réinitialise le tableau qui contiet les tracées graphique du chmemin
     {
-        for(int i = 0; i <= nb_line; i++)
+        Debug.Log("       NEW PATH");
+        for(int i = 0; i < nb_line; i++)
         {
-            
+          
             Destroy(lines[i]);
+
+
         }
         nb_line = 0;
         used = false;
@@ -47,6 +54,41 @@ public class drag_source : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         used = true;
     }
 
+
+    public void ChangePathState()
+    {
+        bool mat;
+        if (nb_line > 0)
+        {
+            if (obj_in.Getinstate() == 2)
+            {
+                state = 2;
+                mat = true;
+            }
+            else
+            {
+
+                state = 1;
+                mat = false;
+            }
+
+            Debug.Log(" change fil de couleur");
+            for (int i = 0; i < nb_line; i++)
+            {
+                if (mat == true)
+                    linesRend[i].material = lineMaterialtrue;
+                else
+                {
+                    linesRend[i].material = lineMaterialfalse;
+                }
+
+
+
+
+            }
+        }
+            
+    }
     private Vector3 GetMouseCameraPoint()
     {
         var ray = camera.ScreenPointToRay(Input.mousePosition);
@@ -70,6 +112,7 @@ public class drag_source : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         if (used == true){
             NewPath();
             valid_path = false;
+            
             used = false;
         }
         
@@ -94,10 +137,15 @@ public class drag_source : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         lines[nb_line] = nextline;
 
-        lineRenderer.material = lineMaterial;
+        if (obj_in.Getinstate() == 2)
+            lineRenderer.material = lineMaterialtrue;
+        else
+            lineRenderer.material = lineMaterialfalse;
+
         lineRenderer.SetPositions(new Vector3[] { lineStartPoint.Value, lineEndPoint });
         lineRenderer.startWidth = lineWith;
         lineRenderer.endWidth = lineWith;
+        linesRend[nb_line] = lineRenderer;
         used = true;
         
     }
@@ -106,20 +154,24 @@ public class drag_source : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
 
         lineStartPoint = null;
-
-        if( valid_path == false)
+        nb_line++;
+        if ( valid_path == false)
         {
             NewPath();
             used = false;
 
         }
+        
+           
 
 
     }
     // Use this for initialization
     void Start () {
         lines = new UnityEngine.GameObject[max_line];
+        linesRend = new LineRenderer[max_line];
         if (lineWith == 0) lineWith = (float)0.02;
+        
 
     }
 
@@ -129,7 +181,7 @@ public class drag_source : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         {
             contactCursor = true;
             lineStartPoint = GetMouseCameraPoint();
-            Debug.Log("enter col");
+            Debug.Log("cursor col true");
         }
         
     }
@@ -140,12 +192,15 @@ public class drag_source : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         if (col.name == "cursor")
         {
             contactCursor = false;
-            Debug.Log("exit col");
+            Debug.Log("curso false");
         }
        
     }
     // Update is called once per frame
     void Update () {
-		
+
+        int tmpstate = obj_in.Getinstate();
+        if (state == 1 && tmpstate == 2 || state == 2 && (tmpstate == 1 || tmpstate == 0))
+            ChangePathState();
 	}
 }

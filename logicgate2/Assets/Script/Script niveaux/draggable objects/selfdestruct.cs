@@ -6,12 +6,14 @@ public class selfdestruct : MonoBehaviour {
 
     public UnityEngine.GameObject me;
     public int collisiondestruct;
+    public level_controller cont_level;
+    public obj_structure obj;
 	// Use this for initialization
 	
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("collision");
+       
         if (collisiondestruct > 0 && collision.name == "instantiatespace") collisiondestruct--;
         else
         {
