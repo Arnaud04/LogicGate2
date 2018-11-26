@@ -5,14 +5,14 @@ using UnityEngine;
 public class scoutput : MonoBehaviour {
 
     private int state;
-    public UnityEngine.GameObject on, off,gate,source;
+    public UnityEngine.GameObject on = null, off = null,gate,source;
     private Vector3 mine;
     // Use this for initialization
     void Start()
     {
         state = 0;
         if (state != 2 && on != null && off != null) on.SetActive(false);
-        else off.SetActive(false);
+        else if(off != null)off.SetActive(false);
        
         mine = this.transform.position;
         

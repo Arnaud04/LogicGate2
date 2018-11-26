@@ -46,7 +46,7 @@ public class obj_input : MonoBehaviour {
     {
         if (outinfo != null)
         {
-            Debug.Log("ancien lien supprimé");
+           // Debug.Log("ancien lien supprimé");
             outinfo.Unsetin();
             outinfo.Setdg(null);
             Unsetout();

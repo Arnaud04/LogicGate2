@@ -28,13 +28,13 @@ public class controller_link : MonoBehaviour {
         inuse = true;
         inobj.Unlinkout();
      
-        Debug.Log("entré selectionné");
+        //Debug.Log("entré selectionné");
     }
     public void Setout(obj_output newoutobj)
     {
         if(inuse == true)
         {
-            Debug.Log("output selected");
+            //Debug.Log("output selected");
             outobj = newoutobj;
             outuse = true;
             outobj.Unlinkin();
@@ -57,7 +57,7 @@ public class controller_link : MonoBehaviour {
         }
         else
         {
-            Debug.Log("selectionné d'abord une entré");
+            //Debug.Log("selectionné d'abord une entré");
         }
     }
 

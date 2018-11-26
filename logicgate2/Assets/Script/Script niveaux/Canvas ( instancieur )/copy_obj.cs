@@ -15,9 +15,10 @@ public class copy_obj : MonoBehaviour {
 
         GameObject newme = Instantiate(obj, father.transform,false);
         //   newme.transform.position = vec;// permit to config object before collision with some objects
-        Debug.Log(" copie d'objet");
+        Debug.Log(" copie d'objet "+ obj.name);
         newme.transform.SetSiblingIndex(index);
         newme.transform.localPosition = vec;// place him on his spawn ( visible for player);
+        newme.name = obj.name;
       
 
     }

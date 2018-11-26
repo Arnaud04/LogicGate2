@@ -6,7 +6,7 @@ using UnityEngine;
 public class scinput : MonoBehaviour {
 
     public int state;// 0 non connecté; 1 faux ; 2 vrai
-    public UnityEngine.GameObject on, off,source;
+    public UnityEngine.GameObject on = null, off = null,source;
     private Vector3 mine;
     public bool fix_drag, fix_value;
     private  bool dragged;// savoir si elle à était posé
@@ -16,8 +16,8 @@ public class scinput : MonoBehaviour {
 	void Start () {
         mine = this.transform.position;
         
-        if (state == 2) off.SetActive(false);
-        else on.SetActive(false);
+        if (state == 2 && off != null) off.SetActive(false);
+        else if( on != null)on.SetActive(false);
         dragged = false;
 
        // Instantiate(copyon,transform.parent);

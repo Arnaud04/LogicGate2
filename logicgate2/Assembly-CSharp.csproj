@@ -63,6 +63,8 @@
   <ItemGroup>
     <Compile Include="Assets\Prefab\niveau\jeu\input\c.cs" />
     <Compile Include="Assets\Prefab\niveau\jeu\output\b.cs" />
+    <Compile Include="Assets\Script\Script niveaux\btn_objectif.cs" />
+    <Compile Include="Assets\Script\Script niveaux\button_menu.cs" />
     <Compile Include="Assets\Script\Script niveaux\Canvas ( instancieur )\copy_obj.cs" />
     <Compile Include="Assets\Script\Script niveaux\controller\controller_link.cs" />
     <Compile Include="Assets\Script\Script niveaux\controller\cursorscript.cs" />
@@ -87,11 +89,12 @@
     <Compile Include="Assets\Script\Script niveaux\draggable objects\selfdestruct.cs" />
     <Compile Include="Assets\Script\Script niveaux\draggable objects\Signalcol.cs" />
     <Compile Include="Assets\Script\Script niveaux\dragging.cs" />
+    <Compile Include="Assets\Script\Script niveaux\instiatespace\drop.cs" />
     <Compile Include="Assets\Script\Script niveaux\instiatespace\instanciation.cs" />
     <Compile Include="Assets\Script\Script niveaux\transmitter\transmitter.cs" />
-    <Compile Include="Assets\Script\Script niveaux\trash\drop.cs" />
     <Compile Include="Assets\Script\Script pour les menus\Dont_destroy.cs" />
     <Compile Include="Assets\Script\Script pour les menus\LoadScene.cs" />
+    <Compile Include="Assets\Script\Script pour les menus\Menu_in_game.cs" />
     <Compile Include="Assets\Script\Script pour les menus\QuitGame.cs" />
     <Compile Include="Assets\Script\Script pour les menus\script_scenes.cs" />
     <Compile Include="Assets\Test\script\drag_link.cs" />

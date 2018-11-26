@@ -13,27 +13,34 @@ public class instanciation : MonoBehaviour {
     public selfdestruct self;
     public int hierarchy_index;
    
-        
+    public void Createobj()
+    {
+        if (self.AskRightCreate() == 1) return;
+
+        Vector3 vec;
+        Quaternion q;
+        q.x = 0;
+        q.y = 0;
+        q.z = 0;
+        q.w = 0;
+
+        vec.x = x_start;
+        vec.y = y_start;
+        vec.z = 0;
+        self.Setcollision(1);
+        copier.copyobj(me, vec, q, hierarchy_index);
+        self.Setcollision(0);
+    }   
     void OnTriggerExit2D(Collider2D col)
     {
 
        
         if (col.name == space)
         {
+            if (self.AskRightCreate() == 1) return;
+            Createobj();
             Debug.Log("exit of space and create");
-            Vector3 vec;
-            Quaternion q;
-            q.x = 0;
-            q.y = 0;
-            q.z = 0;
-            q.w = 0;
            
-            vec.x = x_start;
-            vec.y = y_start;
-            vec.z = 0;
-            self.Setcollision(1);
-            copier.copyobj(me, vec, q, hierarchy_index);
-            self.Setcollision(0);
 
             
           

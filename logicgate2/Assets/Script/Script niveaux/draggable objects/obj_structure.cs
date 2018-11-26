@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class obj_structure : MonoBehaviour {
 
+    private int index;
+
+
+
+    public void SetIndex(int nb)
+    {
+        index = nb;
+    }
+
+    public int GetIndex()
+    {
+        return index;
+    }
 	// Use this for initialization
 	void Start () {
 		
