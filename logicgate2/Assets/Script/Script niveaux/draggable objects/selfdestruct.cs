@@ -11,7 +11,7 @@ public class selfdestruct : MonoBehaviour {
     public selfdestruct me_destruct;
     public instanciation instancieur;
     public cond_obj condition;// sert de passerelle entre l'objet qui à les liens et/ou le signal de la source et le level_controller 
-    
+    private bool init = false; 
     private bool reactivation = false ;// savoir si on vient de réactiver quelque chose qui risque de supprimer l'objet donc ne pas le supprimer cette fois ci, il sera changer dans le level_controller
 
     public bool player_is_instancieur;  // permet au level_controller de savoir si l'objet sera instancié par le joueur ( la décision sera en fait prise par le créateur du niveau)
@@ -48,7 +48,7 @@ public class selfdestruct : MonoBehaviour {
                 int ret = 0;
                 if (player_is_instancieur)
                      ret = cont_level.DeleteObj(me_destruct);
-                Debug.Log("obj Destruction "+ me.name);
+                
                 if (ret == 1)
                 {
                       instancieur.Createobj();
@@ -78,16 +78,31 @@ public class selfdestruct : MonoBehaviour {
     }
     void Start()
     {
+
         /* quand il sera instancié et que ce sera le joueur le responsable il demandera la gestion du controller du niveau*/
         if (player_is_instancieur)
         {
-            cont_level.Addobj(me_destruct);
+
+            if (cont_level.init == true)
+            {
+                cont_level.Addobj(me_destruct);
+                init = true;
+            }
+
         }
 
     }
 
     // Update is called once per frame
     void Update () {
-		
+		if(init == false)
+        {
+            if (cont_level.init == true)
+            {
+                cont_level.Addobj(me_destruct);
+                init = true;
+                
+            }
+        }
 	}
 }

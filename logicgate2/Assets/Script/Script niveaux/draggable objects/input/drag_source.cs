@@ -30,6 +30,10 @@ public class drag_source : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private int nb_line = 0; // count of linerenderer to the path
     private bool valid_path = false;// tell if the pass connected 2 object or no
     
+    public bool GetValid_path()
+    {
+        return valid_path;
+    }
 
 
 

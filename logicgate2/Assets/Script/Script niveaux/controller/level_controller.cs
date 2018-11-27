@@ -9,6 +9,7 @@ public class level_controller : MonoBehaviour {
     public int width, height;// size of screen
     public int nb_transmitter;
     public string lvl;
+    public bool init = false;
     // un tableau par type d'objet 
     // un tableau 2d par tableau d'objet pour les trait
 
@@ -47,8 +48,7 @@ public class level_controller : MonoBehaviour {
     private selfdestruct[] tab_taker;
 
 
-    /* si les objectif des objets fixé et des objet libre ne sont pas réspecté alors le niveau ne seras pas validé*/
-    public Wcondition_fixec_obj fixed_objcond;
+   
 
     public int objectif_g_and;
     public int objectif_g_or;
@@ -161,36 +161,36 @@ public class level_controller : MonoBehaviour {
         {
             case "obj_gate or":
                 return tab_or[index].GetReactivation();
-                break;
+                
 
             case "obj_gate and":
                 return tab_and[index].GetReactivation();
-                break;
+               
 
             case "obj_gate no":
                 return tab_no[index].GetReactivation();
-                break;
+               
 
             case "obj_gate nand":
                 return tab_nand[index].GetReactivation();
-                break;
+               
 
             case "obj_gate xor":
                 return tab_xor[index].GetReactivation();
-                break;
+               
 
             case "obj_gate nor":
                 return tab_nor[index].GetReactivation();
-                break;
+               
 
 
             case "obj_input":
                 return tab_giver[index].GetReactivation();
-                break;
+              
 
             case "obj_output":
                 return tab_taker[index].GetReactivation();
-                break;
+               
             default:
                 Debug.Log(" Appel annormal car rien ne correspond (  default )");
                 break;
@@ -248,16 +248,18 @@ public class level_controller : MonoBehaviour {
     }
     public void Addobj(selfdestruct obj)
     {
+       
         int ret;
         switch (obj.me.name)
         {
             case "obj_gate or":
                 ret = AddinTab(tab_or, max_g_or, obj);
-                if ( ret != -1)
+                if (ret != -1)
                 {
                     obj.SetIndex(ret);
                     nb_g_or++;
                 }
+                else Debug.Log("non ajouté");
                 break;
 
             case "obj_gate and":
@@ -267,6 +269,7 @@ public class level_controller : MonoBehaviour {
                     obj.SetIndex(ret);
                     nb_g_and++;
                 }
+                else Debug.Log("non ajouté");
                 break;
 
             case "obj_gate no":
@@ -276,6 +279,7 @@ public class level_controller : MonoBehaviour {
                     obj.SetIndex(ret);
                     nb_g_no++;
                 }
+                else Debug.Log("non ajouté");
                 break;
 
             case "obj_gate nand":
@@ -285,6 +289,7 @@ public class level_controller : MonoBehaviour {
                     obj.SetIndex(ret);
                     nb_g_nand++;
                 }
+                else Debug.Log("non ajouté");
                 break;
 
             case "obj_gate xor":
@@ -294,6 +299,7 @@ public class level_controller : MonoBehaviour {
                     obj.SetIndex(ret);
                     nb_g_xor++;
                 }
+                else Debug.Log("non ajouté");
                 break;
 
             case "obj_gate nor":
@@ -303,6 +309,7 @@ public class level_controller : MonoBehaviour {
                     obj.SetIndex(ret);
                     nb_g_nor++;
                 }
+                else Debug.Log("non ajouté");
                 break;
 
 
@@ -313,6 +320,7 @@ public class level_controller : MonoBehaviour {
                     obj.SetIndex(ret);
                     nb_giver++;
                 }
+                else Debug.Log("non ajouté");
                 break;
 
             case "obj_output":
@@ -322,6 +330,7 @@ public class level_controller : MonoBehaviour {
                     obj.SetIndex(ret);
                     nb_taker++;
                 }
+                else Debug.Log("non ajouté");
                 break;
             default:
                 Debug.Log(" Appel annormal car rien ne correspond (  default )");
@@ -440,6 +449,57 @@ public class level_controller : MonoBehaviour {
 
         return -1;
     }
+
+    public int NbValid(selfdestruct[] tab,int max)
+    {
+        int nb = 0;
+        for(int i = 0; i < max; i++)
+        {
+            if(tab[i] != null)
+            {
+               
+               if( tab[i].condition.Execpted() == tab[i].condition.ValidCondition())
+                {
+                    
+                    nb++;
+                }
+               
+            }
+        }
+
+        
+        return nb;
+    }
+    public bool EndOfLevel()
+    {
+        int nb = 0;
+
+        nb = NbValid(tab_or, max_g_or);
+        if (nb < objectif_g_or) return false;
+
+        nb = NbValid(tab_nand, max_g_nand);
+        if (nb < objectif_g_nand) return false;
+
+        nb = NbValid(tab_no, max_g_no);
+        if (nb < objectif_g_no) return false;
+
+        nb = NbValid(tab_and, max_g_and);
+        if (nb < objectif_g_and) return false;
+
+        nb = NbValid(tab_xor, max_g_xor);
+        if (nb < objectif_g_xor) return false;
+
+        nb = NbValid(tab_nor, max_g_nor); 
+        if (nb < objectif_g_nor) return false;
+
+        nb = NbValid(tab_taker, max_taker);
+        if (nb < objectif_taker) return false;
+
+       nb = NbValid(tab_giver, max_giver);
+        if (nb < objectif_giver) return false;
+
+        return true;
+    }
     // Use this for initialization
     void Start () {
         tab_and = new selfdestruct[max_g_and];
@@ -451,11 +511,15 @@ public class level_controller : MonoBehaviour {
         tab_giver = new selfdestruct[max_giver];
         tab_taker = new selfdestruct[max_taker];
 
-
+        init = true;
     }
 
     // Update is called once per frame
     void Update () {
 		
+        if(EndOfLevel() == true)
+        {
+            Debug.Log(" niveaux accompli");
+        }
 	}
 }

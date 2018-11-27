@@ -21,6 +21,16 @@ public class cond_obj : MonoBehaviour {
         light = state;
     }
 
+    public int Execpted()
+    {
+        if (by_light == true && by_link == true) return 3;
+
+        if (by_link == true) return 1;
+        if (by_light == true) return 2;
+
+        Debug.Log(" probleme de condition de victoire sur un objet");
+        return -2;
+    }
     public int  ValidCondition()// renvoie -1 si il y a un probleme ;renvoie 0 si aucune des condition n'est validé ; 1 si validé par liaison ; 2 validé par allumé ; 3 les deux conditions;
     {
         
@@ -40,6 +50,9 @@ public class cond_obj : MonoBehaviour {
 
         if (by_light == true && light == true)
             return 2;
+
+
+        
         return 0;
     }
 	// Use this for initialization
