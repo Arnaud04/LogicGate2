@@ -69,6 +69,8 @@
     <Compile Include="Assets\Script\Script niveaux\controller\controller_link.cs" />
     <Compile Include="Assets\Script\Script niveaux\controller\cursorscript.cs" />
     <Compile Include="Assets\Script\Script niveaux\controller\level_controller.cs" />
+    <Compile Include="Assets\Script\Script niveaux\controller\Wcondition_fixec_obj.cs" />
+    <Compile Include="Assets\Script\Script niveaux\draggable objects\cond_obj.cs" />
     <Compile Include="Assets\Script\Script niveaux\draggable objects\gates\drag_gate.cs" />
     <Compile Include="Assets\Script\Script niveaux\draggable objects\gates\g_and.cs" />
     <Compile Include="Assets\Script\Script niveaux\draggable objects\gates\g_nand.cs" />

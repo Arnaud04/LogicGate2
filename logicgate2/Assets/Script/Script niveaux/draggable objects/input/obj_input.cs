@@ -6,7 +6,7 @@ public class obj_input : MonoBehaviour {
 
     public scinput ininfo;// l'objet sur lequel on se trouve
     private obj_output outinfo;
-
+   
     public void Setout(obj_output newout)
     {
         outinfo = newout;
@@ -21,6 +21,7 @@ public class obj_input : MonoBehaviour {
 
     public int Getinstate()
     {
+
         return ininfo.GetState();
     }
 

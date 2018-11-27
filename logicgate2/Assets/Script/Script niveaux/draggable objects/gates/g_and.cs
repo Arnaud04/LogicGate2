@@ -8,6 +8,7 @@ public class g_and : MonoBehaviour {
     public obj_input output;// entry gates and output
     public UnityEngine.GameObject on, off; // image of state of gate
     public bool fix;// draging possible?
+    public selfdestruct self;
 
     public int state;
     // Use this for initialization
@@ -22,17 +23,22 @@ public class g_and : MonoBehaviour {
 
         if ((in1.InIsnotnull() && in2.InIsnotnull()) && (in1.Getinstate() != 0 && in2.Getinstate() != 0))
         {
+            self.condition.SetLink(true);
             if ((in1.Getinstate() == 2 && in2.Getinstate() == 2))
             {
                 state = 2;
+                self.condition.SetLight(true);
             }
             else
             {
                 state = 1;
+                self.condition.SetLight(false);
             }
             return state;
         }
         state = 0;
+        self.condition.SetLink(false);
+        self.condition.SetLight(false);
         return state;
     }
 

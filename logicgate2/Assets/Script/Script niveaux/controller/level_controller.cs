@@ -31,6 +31,10 @@ public class level_controller : MonoBehaviour {
     public int max_giver ;// source 
     public int max_taker;// puit ou source de fin 
 
+
+   
+   
+     
     /*partie fixé par le concepteur du niveau seront fix donc pas de gestion direct de l'objet ( car il ne peut instancier de copie  ou être supprimé en jeu */
     /* partie qui peut être instancié par le joueur*/
     private selfdestruct[] tab_and;
@@ -43,9 +47,20 @@ public class level_controller : MonoBehaviour {
     private selfdestruct[] tab_taker;
 
 
-    
-    // un autre pour le max
-    // une fonction d'initialisation
+    /* si les objectif des objets fixé et des objet libre ne sont pas réspecté alors le niveau ne seras pas validé*/
+    public Wcondition_fixec_obj fixed_objcond;
+
+    public int objectif_g_and;
+    public int objectif_g_or;
+    public int objectif_g_no;
+    public int objectif_g_nand;
+    public int objectif_g_xor;
+    public int objectif_g_nor;
+    public int objectif_giver;// source 
+    public int objectif_taker;// puit ou source de fin 
+
+    // choix de condition de victoire : avoir relier tout les objets placés( et allumer tout les takers); avoir utilisé tout les objets donnés( relier et vérifié les taker);
+    // avoir utilisé ,relier et allumé un minimum d'objets
 
     public void SetColisionOfTab(selfdestruct[] tab,int nb_colision,int max)
     {

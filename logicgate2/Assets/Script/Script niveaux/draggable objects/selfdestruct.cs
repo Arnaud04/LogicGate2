@@ -10,6 +10,7 @@ public class selfdestruct : MonoBehaviour {
     private int index_tab_controller_level = -1;
     public selfdestruct me_destruct;
     public instanciation instancieur;
+    public cond_obj condition;// sert de passerelle entre l'objet qui à les liens et/ou le signal de la source et le level_controller 
     
     private bool reactivation = false ;// savoir si on vient de réactiver quelque chose qui risque de supprimer l'objet donc ne pas le supprimer cette fois ci, il sera changer dans le level_controller
 

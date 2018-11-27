@@ -9,6 +9,7 @@ public class g_xor : MonoBehaviour {
     public UnityEngine.GameObject on, off; // image of state of gate
     public bool fix;// draging possible?
     public int state;
+    public selfdestruct self;
     // Use this for initialization
     void Start()
     {
@@ -23,24 +24,28 @@ public class g_xor : MonoBehaviour {
 
         if ((in1.InIsnotnull() && in2.InIsnotnull()) && (in1.Getinstate() != 0 && in2.Getinstate() != 0))
         {
-
+            self.condition.SetLink(true);
             Debug.Log("les deux sont relié");
                 if ((in1.Getinstate() == 1 && in2.Getinstate() == 2) || (in1.Getinstate() == 2 && in2.Getinstate() == 1))
                 {
                 Debug.Log(" vrai");
                         state = 2;
+                         self.condition.SetLight(true);
                         return state;
                     
                     
                 }
                 else
                 {
-                    state = 1;
+                     self.condition.SetLight(false);
+                     state = 1;
                    return state;
                 }
                    
                 
         }
+        self.condition.SetLink(false);
+        self.condition.SetLight(false);
         state = 0;
         return state;
     }

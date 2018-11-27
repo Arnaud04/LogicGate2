@@ -10,6 +10,7 @@ public class g_nor : MonoBehaviour {
     public bool fix;// draging possible?
 
     public int state;
+    public selfdestruct self;
     // Use this for initialization
     void Start()
     {
@@ -21,18 +22,23 @@ public class g_nor : MonoBehaviour {
     {
         if ((in1.InIsnotnull() && in2.InIsnotnull()) && (in1.Getinstate() != 0 && in2.Getinstate() != 0))
         {
+            self.condition.SetLink(true);
             if ((in1.Getinstate() == 1 && in2.Getinstate() == 1))
             {
                 state = 2;
+                self.condition.SetLight(true);
             }
             else
             {
                 state = 1;
+                self.condition.SetLight(false);
             }
             return state;
         }
 
         state = 0;
+        self.condition.SetLink(false);
+        self.condition.SetLight(false);
         return state;
     }
 
