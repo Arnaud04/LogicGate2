@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/NIVEAUX_DIDACTITIEL.unity
+- path: Assets/Scenes/niveau adrien M et D.unity
   isLoaded: 1
   isActive: 1
