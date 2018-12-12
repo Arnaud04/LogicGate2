@@ -11,7 +11,7 @@ public class drag_source : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public Material lineMaterialfalse,lineMaterialtrue;
     
     public float lineWith;
-    public float depth;
+    
     private Vector3? lineStartPoint = null;
 
     public UnityEngine.GameObject src;
@@ -96,7 +96,7 @@ public class drag_source : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private Vector3 GetMouseCameraPoint()
     {
         var ray = camera.ScreenPointToRay(Input.mousePosition);
-        return ray.origin;// + ray.direction * depth;
+        return ray.origin;
     }
 
     public void CutLink()
@@ -174,7 +174,7 @@ public class drag_source : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     void Start () {
         lines = new UnityEngine.GameObject[max_line];
         linesRend = new LineRenderer[max_line];
-        if (lineWith == 0) lineWith = (float)0.02;
+        if (lineWith == 0) lineWith = (float)0.002;
         
 
     }

@@ -183,6 +183,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 13648552}
   m_CullTransparentMesh: 0
+--- !u!114 &320271137 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114868971658084306, guid: 79cfcd3a7e4473046892fd69d6a5ac6d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1003107576}
+  m_Script: {fileID: 11500000, guid: 00bda0e060aff0b41aa08a8afc1ea81e, type: 3}
 --- !u!1 &360895036
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +578,16 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: 08_Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 114314043154139902, guid: 285c0a78a42730d4da24d3938629eed5,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 320271137}
+    - target: {fileID: 114314043154139902, guid: 285c0a78a42730d4da24d3938629eed5,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Loader
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 285c0a78a42730d4da24d3938629eed5, type: 2}

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour {
 
     // Use this for initialization
-  
+
     
     void Start()
     {
@@ -15,6 +15,8 @@ public class LoadScene : MonoBehaviour {
     }
 
 	public void Loader(string scene){
+
+      
 
         SceneManager.LoadSceneAsync(scene);
         SceneManager.UnloadScene(SceneManager.GetActiveScene());

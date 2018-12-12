@@ -9,7 +9,7 @@ public class level_controller : MonoBehaviour {
     public int width, height;// size of screen
     public int nb_transmitter;
     public string lvl;
-    public bool init = false;
+    public bool init = false;// ne pas toucher
     // un tableau par type d'objet 
     // un tableau 2d par tableau d'objet pour les trait
 
